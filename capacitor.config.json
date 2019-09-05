@@ -1,0 +1,7 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "firstionicapp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
