@@ -1,0 +1,33 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content> -->
+
+<ion-split-pane>
+  <ion-menu contentId = "content">
+    <ion-header>
+      <ion-toolbar>
+        <img src="{{users.profileImage}}" width="100" height="100" class="someClass" offset="2"/>
+        <!-- <ion-img src="https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-users-icon-png-image_856952.jpg" width="150" height="150"></ion-img> -->
+      </ion-toolbar>
+      <ion-label>{{users.email}}</ion-label>
+
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide = "false" *ngFor="let page of pages">
+          <ion-item [routerLink]="page.url" routerDirection="root" [class.active-item]= "selectedPath === page.url">
+            {{page.title}}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="content" main ></ion-router-outlet>
+</ion-split-pane>

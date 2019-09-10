@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color= "primary" class="ion-float-right">
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title style="text-align: center">Register</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <form (ngSubmit)="registerForm()">
+                <ion-item>
+                  <ion-label position= "floating">Name</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.first_name" name="title"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position= "floating">Email</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.email" name="title"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position= "floating">password</ion-label>
+                  <ion-input type="text" [(ngModel)]="user.password" name="title"></ion-input>
+                </ion-item>
+                <ion-row>
+                  <ion-col size-md= "6">
+                    <ion-button (click)="registerForm()">Register</ion-button>
+                  </ion-col>
+                  <ion-col size-md= "6">
+                      <ion-label>If You have account <a [routerLink]="['/login']" routerLinkActive="router-link-active" >Login Here</a> </ion-label>
+                      <!-- <ion-icon name="logo-facebook"></ion-icon> -->
+                    </ion-col>
+                </ion-row>
+              </form>
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
